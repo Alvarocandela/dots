@@ -10,7 +10,7 @@ My Personal Dotfiles. Based on [justTOBBI](https://github.com/justTOBBI/dotfiles
 |------------------:|---------------|
 |                 OS| Arch Linux    |
 |                 WM| bspwm         |
-|         Lockscreen| slim          |
+|         Lockscreen| slimlock      |
 |           Terminal| kitty         |
 |              Shell| zsh           |
 |             Prompt| Powerlevel10k |
