@@ -1,0 +1,42 @@
+snippet init
+	\documentclass[a4paper,12pt]{article}
+	\begin{document}
+		\title{${1:title}}
+		\author{Álvaro Candela}
+		\date{2º Bach}
+		\maketitle
+		${0:$INSERT}
+	\pagestyle{plain}
+	\end{document}
+
+snippet box
+	\fbox{%
+	\parbox{\textwidth}{%
+		${0:INSERT TEXT}
+		%}
+	}
+snippet list
+	\begin{itemize}
+		\item ${0}
+	\end{itemize}
+
+snippet pg
+	\newpage
+
+snippet sec
+	\section{${1:SECTION}}
+		${0:TEXT}
+
+snippet ssec
+	\subsection{${1:SECTION}}
+		${0:TEXT}
+
+snippet sssec
+	\subsubsection{${1:SECTION}}
+		${0:TEXT}
+
+snippet bd
+	\textbf{${1:BOLD TEXT}}${0:NORMAL TEXT}
+
+snippet frac
+	\frac{${2:DIVIDENDO}}{${1:DIVISOR}}${0:TEXT}

@@ -1,0 +1,166 @@
+# wm independent hotkeys
+#
+
+# Mute volume
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+XF86AudioRaiseVolume
+    pactl set-sink-volume @DEFAULT_SINK@ +1%
+
+XF86AudioLowerVolume
+    pactl set-sink-volume @DEFAULT_SINK@ -1%
+
+XF86AudioPlay
+    playerctl play-pause
+
+XF86AudioPrev
+    playerctl previous
+
+XF86AudioNext
+    playerctl next
+
+XF86MonBrightnessUp
+    brightnessctl set 10%+
+
+XF86MonBrightnessDown
+    brightnessctl set 10%-
+
+# Terminal emulator
+super + Return
+	kitty
+
+# Program launcher
+super + r
+	/home/alvaro/.config/rofi/bin/launcher
+
+# File explorer
+super + e
+    kitty -e ranger
+
+# Firefox
+super + f
+    qutebrowser
+
+# Neovim
+super + c
+    nvim
+
+# WhatsApp
+super + w
+    whatsapp-nativefier
+
+# Powermenu
+super + p
+    /home/alvaro/.config/rofi/bin/powermenu
+
+# Music
+super + m
+    /home/alvaro/.config/rofi/bin/music
+
+# Network
+super + n
+    /home/alvaro/.config/rofi/bin/network
+
+# Lockscreen
+super + l
+    slimlock
+
+# Discord
+super + d
+    discord
+
+# Notion
+super + n
+    notion-app-enhanced
+
+# Toggle Study Mode
+super + s
+    /home/alvaro/.studymode.sh
+
+# Zathura
+super + z
+    zathura
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+#
+# bspwm hotkeys
+#
+
+# quit/restart bspwm
+super + ctrl + {q,r}
+	bspc {quit,wm -r}
+
+# close and kill
+super + shift + q
+	bspc node -c
+
+# alternate between the tiled and monocle layout
+super + shift + m
+	bspc desktop -l next
+
+# send the newest marked node to the newest preselected node
+super + y
+	bspc node newest.marked.local -n newest.!automatic.local
+
+# swap the current node and the biggest window
+super + g
+	bspc node -s biggest.window
+
+#
+# state/flags
+#
+
+# set the window state
+super + shift + {t,ctrl + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# set the node flags
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+super + {_,shift + }{left, down, up, right}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# focus the older or newer node in the focus history
+super + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+#
+#
+# move/resize
+#
+
+# expand a window by moving one of its side outward
+super + shift + {left, down, up, right}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + shift + alt + {left, down, up, right}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + alt + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
