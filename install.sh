@@ -1,4 +1,4 @@
-paru -S - < pkglist.txt
+paru -S --noconfirm - < pkglist.txt
 
 stow bspwm coc fondos kitty nvim p10k picom polybar rofi startpage studymode sxhkd zathura zsh
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
