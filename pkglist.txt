@@ -20,6 +20,7 @@ ranger
 rofi
 slim
 spotify
+stow
 sxhkd
 texlive-core
 xorg
