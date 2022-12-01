@@ -20,37 +20,18 @@ My Personal Dotfiles. Based on [justTOBBI](https://github.com/justTOBBI/dotfiles
 |Online Music Player| spotify       |
 
 # Installation
-**NOTE: THIS COMMANDS ONLY WORK IF YOU USE ARCH LINUX. IF NOT, YOU WILL HAVE TO BUILD SOME PACKAGES BY YOURSELF** \
+**NOTE: THE FOLLOWING COMMANDS ONLY WORK IF YOU USE ARCH LINUX. IF NOT, YOU WILL HAVE TO BUILD SOME PACKAGES BY YOURSELF** \
 To install this dotfiles, first run this command in order to install paru, the AUR helper we'll be using to all the necessary programs:
     
     git clone https://aur.archlinux.org/paru-bin.git
     cd paru-bin
     makepkg -si
    
-Once paru is installed, run this command to install all of the necessary programs for this dotfiles to work.
+Once paru is installed, run the installation script.
        
-    paru -Syu - < pkglist.txt
-       
-**Congratulations!** Now you have installed all of the necessary packages. Now just copy the config files to their correct locations and you'll be good to go(will upload a script to do it for you, but don't have the time right now).
-|File                        |Destination                |
-|:---------------------------|---------------------------|
-|:open_file_folder: startpage|$HOME/.startpage           |
-|:page_facing_up:studymode.sh|$HOME/.studymode.sh        |
-|:page_facing_up:    p10k.zsh|$HOME/.p10k.zsh            |
-|:page_facing_up:      .zshrc|$HOME/.zshrc               |
-|:open_file_folder:     bspwm|$HOME/.config/bspwm/       |
-|:open_file_folder:       coc|$HOME/.config/coc          |
-|:open_file_folder:    fondos|$HOME/.config/fondos       |
-|:open_file_folder:     kitty|$HOME/.config/kitty        |
-|:open_file_folder:   ncmpcpp|$HOME/.config/ncmpcpp      |
-|:open_file_folder:      nvim|$HOME/.config/nvim         |
-|:open_file_folder:     picom|$HOME/.config/picom        |
-|:open_file_folder:   polybar|$HOME/.config/polybar      |
-|:open_file_folder:     sxhkd|$HOME/.config/sxhkd/       |
-|:open_file_folder:      rofi|$HOME/.config/rofi         |
-|:open_file_folder:   zathura|$HOME/.config/zathura      |
+    ./install.sh
 
-Once you've copied all this files, you're good to go! Just remember to set the color theme using something like lxappearance and then reboot
+Once you've run the script, you're good to go! Just remember to set the color scheme to dracula using something like lxappearance and then reboot.
 # Keybinds
 Win stands for the Windows Key, A.K.A the Meta Key
 |Key            |Action           |
@@ -91,7 +72,7 @@ The left screen has those black borders because my second screen has a different
 ![Screenshot3](/screenshots/screenshot3.png)
 
 # Thanks to
- - [justTOBBI](https://github.com/justTOBBI) from which I stole most of my bspwm configs.
- - [S4vitar](https://youtube.com/s4vitar) for inspiring me to give tiling window managers a try. Btw, the P10K config is his.
+ - [justTOBBI](https://github.com/justTOBBI) who actually made most of my bspwm configs.
+ - [S4vitar](https://youtube.com/s4vitar) for inspiring me to give bspwm and p10k a try.
  - [r/unixporn](https://reddit.com/r/unixporn) for inspiring me to rice my desktop.
  - [u/TheLerny](https://reddit.com/u/TheLerny) for making one of the coolest startpages I've ever seen.

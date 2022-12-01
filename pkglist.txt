@@ -14,12 +14,12 @@ neofetch
 neovim
 nerd-fonts-complete
 npm
-nvim-packer-git
 playerctl
 polybar
 ranger
 rofi
 slim
+spotify
 sxhkd
 texlive-core
 xorg
