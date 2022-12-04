@@ -48,4 +48,5 @@ alias neofetch="neofetch | lolcat"
 alias spotify="spotify --force-device-scale-factor=1.1"
 alias ping="pingu"
 alias vim="nvim"
+alias ssh="kitty +kitten ssh"
 export PATH=$PATH:/home/alvaro/.spicetify
