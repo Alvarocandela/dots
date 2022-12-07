@@ -2,7 +2,7 @@ antigen
 awesome-terminal-fonts
 bspwm
 feh
-firefox
+librewolf-bin
 gdm
 kitty
 lolcat
