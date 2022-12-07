@@ -8,9 +8,7 @@ local ensure_packer = function()
   end
   return false
 end
-
 local packer_bootstrap = ensure_packer()
-
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
@@ -37,7 +35,6 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     use 'nvim-telescope/telescope-file-browser.nvim'
-    use 'folke/which-key.nvim'
 	use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
