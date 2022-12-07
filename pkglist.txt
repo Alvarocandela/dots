@@ -3,6 +3,7 @@ awesome-terminal-fonts
 bspwm
 feh
 firefox
+gdm
 kitty
 lolcat
 mpc

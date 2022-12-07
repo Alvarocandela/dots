@@ -6,6 +6,7 @@ rm -rf paru
 
 paru -Syu --noconfirm - < pkglist.txt
 
+sudo systemctl enable --now iwd networkmanager gdm
 paru -G spotify
 cd spotify
 sed -i '9s/_commit=gc5f8b819/_commit=gc5f8b819-2/' PKGBUILD
