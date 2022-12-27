@@ -193,11 +193,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alvaro/.local/share/nvim/site/pack/packer/start/vimtex",
     url = "https://github.com/lervag/vimtex"
-  },
-  ["which-key.nvim"] = {
-    loaded = true,
-    path = "/home/alvaro/.local/share/nvim/site/pack/packer/start/which-key.nvim",
-    url = "https://github.com/folke/which-key.nvim"
   }
 }
 

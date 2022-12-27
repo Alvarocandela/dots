@@ -36,7 +36,7 @@ super + r
 
 # File explorer
 super + e
-    kitty -e ranger
+    EDITOR=nvim kitty -e ranger
 
 # Firefox
 super + f
