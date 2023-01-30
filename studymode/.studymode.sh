@@ -15,6 +15,10 @@ if [ $ans -eq 0 ]; then
         sed -i '13s/#1E1E2E/#282A36/' /home/alvaro/.config/polybar/colors.ini
         sed -i '962s/#1E2329/#282A36/' /home/alvaro/.config/kitty/kitty.conf
         pactl -- set-sink-mute 2 on
+        /usr/local/bin/spotify &
+        bspc desktop -f 7
+        /usr/bin/zathura &
+        bspc desktop -f 5
     else
         sed -i '11s/study1/main/' /home/alvaro/.config/polybar/launch.sh
         sed -i '13s/study2/second/' /home/alvaro/.config/polybar/launch.sh
@@ -23,7 +27,6 @@ if [ $ans -eq 0 ]; then
         sed -i '966s/1/0.85/' /home/alvaro/.config/kitty/kitty.conf
         sed -i '13s/#282A36/#1E1E2E/' /home/alvaro/.config/polybar/colors.ini
         sed -i '962s/#282A36/#1E2329/' /home/alvaro/.config/kitty/kitty.conf
-        pactl -- set-sink-mute 2 off
     fi
     # Reload the window manager for the config changes to apply
     bspc wm -r

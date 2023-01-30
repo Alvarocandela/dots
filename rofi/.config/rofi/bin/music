@@ -10,8 +10,6 @@ if [[ "$layout" == "TRUE" ]]; then
 	button_stop='栗'
 	button_next='怜'
 	button_previous='玲'
-	button_repeat='凌'
-	button_shuffle='列'
 	button_error=''
 else
 	button_music='ﱘ MPD'
@@ -20,8 +18,6 @@ else
 	button_stop='栗 Stop'
 	button_next='怜  Next   '
 	button_previous='玲 Previous'
-	button_repeat='凌 Repeat'
-	button_shuffle='列 Shuffle'
 	button_error=' Error'
 fi
 
@@ -30,40 +26,20 @@ active=""
 urgent=""
 
 # Gets the current status of mpd
-status="$(mpc status)"
+status="$(playerctl status)"
 
 # Defines the Play / Pause option content
-if [[ $status == *"[playing]"* ]]; then
+if [[ $status == *"Playing"* ]]; then
 	toggle="$button_pause"
 else
 	toggle="$button_play"
 fi
 
-# Display if repeat mode is on / off
-tog_repeat="$button_repeat"
-if [[ $status == *"repeat: on"* ]]; then
-    active="-a 4"
-elif [[ $status == *"repeat: off"* ]]; then
-    urgent="-u 4"
-else
-    tog_repeat="$button_error"
-fi
-
-# Display if random mode is on / off
-tog_random="$button_shuffle"
-if [[ $status == *"random: on"* ]]; then
-    [ -n "$active" ] && active+=",5" || active="-a 5"
-elif [[ $status == *"random: off"* ]]; then
-    [ -n "$urgent" ] && urgent+=",5" || urgent="-u 5"
-else
-    tog_random="$button_error"
-fi
-
 # Variable passed to rofi
-options="$toggle\n$button_stop\n$button_previous\n$button_next\n$tog_repeat\n$tog_random"
+options="$toggle\n$button_stop\n$button_previous\n$button_next"
 
 # Get the current playing song
-current=$(mpc -f %title% current)
+current="$($HOME/.config/rofi/bin/get_music.sh)"
 # If mpd isn't running it will return an empty string, we don't want to display that
 if [[ -z "$current" ]]; then
     current="None"
@@ -73,21 +49,15 @@ fi
 chosen="$(echo -e "$options" | $rofi_command -p "$current" -dmenu $active $urgent -selected-row 0)"
 case $chosen in
     $button_previous)
-        mpc -q prev && kunst --size 60x60 --silent
+        playerctl previous
         ;;
     $toggle)
-        mpc -q toggle && kunst --size 60x60 --silent
+        playerctl play-pause
         ;;
     $button_stop)
-        mpc -q stop
+        playerctl stop
         ;;
     $button_next)
-        mpc -q next && kunst --size 60x60 --silent
-        ;;
-    $tog_repeat)
-        mpc -q repeat
-        ;;
-    $tog_random)
-        mpc -q random
+        playerctl next
         ;;
 esac

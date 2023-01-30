@@ -51,6 +51,10 @@ return require('packer').startup(function(use)
     require("mason").setup()
     require'lspconfig'.pylsp.setup{} 
     use {'neoclide/coc.nvim', branch = 'release'}
+    use({
+  'terror/chatgpt.nvim',
+  run = 'pip3 install -r requirements.txt'
+})
   if packer_bootstrap then
     require('packer').sync()
   end

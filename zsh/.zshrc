@@ -43,7 +43,6 @@ autoload -U compinit; compinit
 alias ls="lsd"
 alias cat="bat"
 alias fan="sudo perfmode -fan"
-alias mail="himalaya"
 alias neofetch="neofetch | lolcat"
 alias spotify="spotify --force-device-scale-factor=1.1"
 alias ping="pingu"

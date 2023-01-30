@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/alvaro/.local/share/nvim/site/pack/packer/start/barbar.nvim",
     url = "https://github.com/romgrk/barbar.nvim"
   },
+  ["chatgpt.nvim"] = {
+    loaded = true,
+    path = "/home/alvaro/.local/share/nvim/site/pack/packer/start/chatgpt.nvim",
+    url = "https://github.com/terror/chatgpt.nvim"
+  },
   ["coc.nvim"] = {
     loaded = true,
     path = "/home/alvaro/.local/share/nvim/site/pack/packer/start/coc.nvim",
