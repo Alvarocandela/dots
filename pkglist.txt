@@ -3,7 +3,6 @@ awesome-terminal-fonts
 bspwm
 feh
 librewolf-bin
-gdm
 kitty
 lolcat
 mpc
