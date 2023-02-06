@@ -5,7 +5,6 @@ require("telescope").load_extension "file_browser"
 vim.api.nvim_set_keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader=" "
 vim.g.localmapleader=" "
-vim.keymap.set("n", "<leader>", ":WhichKey <leader><cr>", {silent=true})
 vim.keymap.set("n", "<leader>e", ":NERDTreeToggle<cr>", opts)
 vim.keymap.set("n", "<leader>nf", ":DashboardNewFile <cr>", opts)
 vim.keymap.set('n', '<leader>ff', ":Telescope find_files find_command=rg,--ignore,--hidden,--files prompt_prefix=🔍<cr>", opts)

@@ -15,6 +15,7 @@ vim.g.guioptions = "egmrti"
 vim.g.gfn = "Monospace 10"
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_perl_provider = 0
+vim.opt.timeoutlen = 300
 
 -- VimTeX config
 vim.g.tex_flavor = 'latex'
@@ -22,10 +23,10 @@ vim.g.vimtex_view_method = 'zathura'
 vim.o.conceallevel = 1
 vim.g.tex_conceal = 'abdmg'
 
+require('dashboard-nvim')
 require('plugins')
 require('onedark').setup {style = 'deep'}
 require('onedark').load()
 require('airline_fonts')
 require('snippy_mappings')
-require('dashboard-nvim')
 require('keybindings')

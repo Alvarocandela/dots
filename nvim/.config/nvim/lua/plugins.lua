@@ -40,21 +40,21 @@ return require('packer').startup(function(use)
         run = ':TSUpdate'
     }
 
+    use {'neoclide/coc.nvim', branch = 'release'} 
+
     -- Snippets
     use 'dcampos/nvim-snippy'
 
-    -- LSP and completion
-    use 'neovim/nvim-lspconfig'
-    use "williamboman/mason.nvim"
-    use 'williamboman/mason-lspconfig.nvim'
-    use 'mfussenegger/nvim-dap'
-    require("mason").setup()
-    require'lspconfig'.pylsp.setup{} 
-    use {'neoclide/coc.nvim', branch = 'release'}
     use({
   'terror/chatgpt.nvim',
   run = 'pip3 install -r requirements.txt'
 })
+    use {
+   "folke/which-key.nvim",
+   config = function()
+     require("whichkey").setup()
+   end,
+}
   if packer_bootstrap then
     require('packer').sync()
   end
