@@ -55,6 +55,7 @@ return require('packer').startup(function(use)
      require("whichkey").setup()
    end,
 }
+use 'elkowar/yuck.vim'
   if packer_bootstrap then
     require('packer').sync()
   end
