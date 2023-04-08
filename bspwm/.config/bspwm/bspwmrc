@@ -21,19 +21,20 @@ bspc config top_padding 50
 bspc rule -a Zathura state=tiled desktop=5
 bspc rule -a Gxmessage state=floating
 bspc rule -a Spotify state=tiled desktop=7
-bspc rule -a whatsdesk state=tiled desktop=3
+bspc rule -a whatsdesk state=tiled desktop=8
 
 xinput set-prop "ELAN1200:00 04F3:30BA Touchpad" "libinput Tapping Enabled" 1
 
-numlockx &
+setxkbmap es
+numlockx
 brightnessctl set 255
-picom --experimental-backends &
-~/.config/polybar/launch.sh &
 bspc config focus_follows_pointer true
-xsetroot -cursor_name left_ptr &
-
+xsetroot -cursor_name left_ptr
 if [[ $(/usr/bin/cat /home/alvaro/.config/polybar/launch.sh | grep 'polybar -q main') ]]; then
     feh --bg-fill /home/alvaro/.config/fondos/Desk.png
 else
     feh --bg-fill /home/alvaro/.config/fondos/Tree.png
 fi
+picom --experimental-backends &
+~/.config/polybar/launch.sh
+rclone mount --daemon Drive\ Personal: drives/Drive\ Personal

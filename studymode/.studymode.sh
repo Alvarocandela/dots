@@ -15,9 +15,9 @@ if [ $ans -eq 0 ]; then
         sed -i '13s/#1E1E2E/#282A36/' /home/alvaro/.config/polybar/colors.ini
         sed -i '962s/#1E2329/#282A36/' /home/alvaro/.config/kitty/kitty.conf
         pactl -- set-sink-mute 2 on
-        /usr/local/bin/spotify &
+        /usr/bin/spotify &
         bspc desktop -f 7
-        /usr/bin/zathura &
+        ~/.studysmarter/StudySmarterWebApp &
         bspc desktop -f 5
     else
         sed -i '11s/study1/main/' /home/alvaro/.config/polybar/launch.sh
