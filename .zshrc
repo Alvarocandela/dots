@@ -34,10 +34,6 @@ antigen apply
 source $HOME/.oh-my-zsh/oh-my-zsh.sh
 autoload -U compinit; compinit
 
-#Initialize fzf plugin
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # Add spicetify to path
 export PATH=$PATH:$HOME/.spicetify
 
@@ -48,3 +44,5 @@ alias fan="sudo perfmode -fan"
 alias neofetch="neofetch | lolcat"
 alias ssh="kitty +kitten ssh"
 eval $(thefuck --alias)
+
+export PATH=$PATH:/home/alvaro/.spicetify
