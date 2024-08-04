@@ -40,9 +40,5 @@ export PATH=$PATH:$HOME/.spicetify
 #Some aliases
 alias ls="lsd"
 alias cat="bat"
-alias fan="sudo perfmode -fan"
 alias neofetch="neofetch | lolcat"
 alias ssh="kitty +kitten ssh"
-eval $(thefuck --alias)
-
-export PATH=$PATH:/home/alvaro/.spicetify

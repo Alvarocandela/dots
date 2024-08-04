@@ -24,7 +24,7 @@ case $chosen in
 			systemctl reboot
         ;;
     $lock)
-			betterlockscreen -l
+        hyprlock
         ;;
     $suspend)
 			mpc -q pause
@@ -32,5 +32,6 @@ case $chosen in
 			systemctl suspend
         ;;
     $logout)
+    hyprland dispatch exit
         ;;
 esac
