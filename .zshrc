@@ -1,9 +1,8 @@
-clear && neofetch | lolcat
+clear && fastfetch | lolcat
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-source /usr/share/zsh/share/antigen.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -24,13 +23,8 @@ bindkey '^[[D'    backward-char                 # left       move cursor one cha
 bindkey '^[[C'    forward-char                  # right      move cursor one char forward
 bindkey '^[[A'    up-line-or-beginning-search   # up         prev command in history
 bindkey '^[[B'    down-line-or-beginning-search # down       next command in history
-HYPHEN_INSENSITIVE="true"
-COMPLETION_WAITING_DOTS="true"
 plugins=(sudo command-not-found history-substring-search)
-antigen bundle zsh-users zsh-syntax-highlighting
-antigen bundle chrissicool/zsh-256color
-antigen bundle zsh-users/zsh-completions
-antigen apply
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $HOME/.oh-my-zsh/oh-my-zsh.sh
 autoload -U compinit; compinit
 
