@@ -28,9 +28,6 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $HOME/.oh-my-zsh/oh-my-zsh.sh
 autoload -U compinit; compinit
 
-# Add spicetify to path
-export PATH=$PATH:$HOME/.spicetify
-
 #Some aliases
 alias ls="lsd"
 alias cat="bat"
