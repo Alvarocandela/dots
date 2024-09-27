@@ -1,0 +1,9 @@
+[11:32:43 2024-09-27] FETCHING Version 2.38.3
+[11:32:43 2024-09-27] CREATING /home/alvaro/.spicetify
+[11:32:43 2024-09-27] DOWNLOADING https://github.com/spicetify/cli/releases/download/v2.38.3/spicetify-2.38.3-linux-amd64.tar.gz
+[11:32:46 2024-09-27] EXTRACTING /home/alvaro/.spicetify/spicetify.tar.gz
+[11:32:46 2024-09-27] SETTING EXECUTABLE PERMISSIONS TO /home/alvaro/.spicetify/spicetify
+[11:32:46 2024-09-27] REMOVING /home/alvaro/.spicetify/spicetify.tar.gz
+[11:32:46 2024-09-27] APPENDING /home/alvaro/.spicetify to PATH in /home/alvaro/.zshrc
+[11:32:46 2024-09-27] spicetify v2.38.3 was installed successfully to /home/alvaro/.spicetify
+[11:32:46 2024-09-27] Run 'spicetify --help' to get started

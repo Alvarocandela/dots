@@ -33,3 +33,5 @@ alias ls="lsd"
 alias cat="bat"
 alias neofetch="neofetch | lolcat"
 alias ssh="kitty +kitten ssh"
+
+export PATH=$PATH:/home/alvaro/.spicetify
