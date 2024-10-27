@@ -11,7 +11,7 @@ window#waybar {
     background: linear-gradient(45deg, rgb(214, 39, 200), rgb(5, 83, 252));
     color: rgba(255,255,255,255);
     border-radius: 0.5rem;
-    padding: 2px;
+    padding: 2px
 }
 
 .bar0 .modules-center {
@@ -36,14 +36,14 @@ window#waybar {
     padding: 2px;
 }
 
-/* label.module {
+ label.module {
     margin-left: -1px;
-} */
+}
 
 #workspaces {
     background-color: rgba(0,0,0,0.5);
     border-radius: 0.5rem;
-    padding: 0 2px;
+    padding: 0 4px;
 }
 
 #workspaces button {
