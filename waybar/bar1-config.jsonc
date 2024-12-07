@@ -3,12 +3,12 @@
     "layer": "top",
     "position": "top",
     "height": 10,
-    // "width": 1920,
+    "width": 1920,
     "margin": "5",
     "spacing": 10,
     "mode": "top",
     // "exclusive": true,
-    "output": "HDMI-A-1",
+    "output": "eDP-1",
     "reload_style_on_change": true,
     "modules-left": [
         "hyprland/workspaces"
