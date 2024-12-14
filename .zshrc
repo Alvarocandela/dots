@@ -33,5 +33,6 @@ alias ls="lsd"
 alias cat="bat"
 alias neofetch="neofetch | lolcat"
 alias ssh="kitty +kitten ssh"
+alias spotx="bash <(curl -sSL https://spotx-official.github.io/run.sh) -i"
 
 export PATH=$PATH:/home/alvaro/.spicetify
