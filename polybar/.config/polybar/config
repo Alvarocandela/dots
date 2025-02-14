@@ -167,7 +167,7 @@ ws-icon-3 = 4;%{F#81A1C1}󰖣
 ws-icon-4 = 5;%{F#A3BE8C}
 ws-icon-5 = 6;%{F#F9DE8F}󰈹  
 ws-icon-6 = 7;%{F#FF9B93}
-ws-icon-7 = 8;%{F#95E1D3}
+ws-icon-7 = 8;%{F#95E1D3}
 ws-icon-8 = 9;%{F#FF0000}
 ws-icon-9 = 10;%{F#A3BE8C}󰌘
 
@@ -256,7 +256,7 @@ format-prefix-foreground = #d19a66
 
 [module/updates]
 type = custom/script
-exec = checkupdates | wc -l
+exec = eix --installed --upgrade --format '<installedversions:NAMEVERSION>' | head -n -1 | wc -l
 format = <label>
 interval = 4600 
 label =  %output%  
@@ -272,7 +272,7 @@ click-left = "~/.config/rofi/bin/powermenu"
 
 [module/wlan]
 type = internal/network
-interface = wlan0
+interface = wlp3s0
 interval = 3.0
 format-connected =  <label-connected>
 label-connected = " 󰤪  %essid% " 

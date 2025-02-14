@@ -1,7 +1,7 @@
 #  ------ programs  -------- # 
 
 super + Return
-    kitty
+    st
 
 super + space
     rofi -show drun
@@ -10,13 +10,10 @@ super + n
     bash ~/.local/bin/vi_padding
 
 super + f
-    firefox -P 'Personal' -no-remote
+    zen-bin -P 'Personal' -no-remote
 
 super + u
-    firefox -P 'Uni' -no-remote
-
-super + e
-    kitty -e ranger
+    zen-bin -P 'Uni' -no-remote
 
 super + w
     zapzap
@@ -175,8 +172,5 @@ super + Print
 super + shift + s
       maim --select "/home/$USER/Pictures/$(date).png" | xclip -selection clipboard -t image/png
 
-super + {_,shift + }{a,b,c,d,e,0}
-      bspc {desktop -f,node -d} '^{1-5,5}' --follow 
-
 super  + r
-      tdrop -ma -x '25%' -y '5%' -w '50%' -h '30%' -p 'bspc rule -a St -o state=floating' st -T ranger -e ranger 
+      tdrop -ma -x '25%' -y '5%' -w '50%' -h '30%' -p 'bspc rule -a St -o state=floating' st -T spf -e spf 
