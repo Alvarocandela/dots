@@ -7,7 +7,6 @@ bspc config border_width 3
 bspc config borderless_monocle false
 
 bspc config window_gap 10
-bspc config split_ratio 0.50
 bspc config gapless_monocle true
 bspc config focus_follows_pointer true
 
@@ -18,6 +17,7 @@ bspc rule -a Emacs state=tiled
 bspc rule -a "/usr/bin/spotify" desktop=^5 follow=off
 bspc rule -a "/usr/bin/zapzap" desktop=^4 follow=off
 bspc rule -a "/usr/bin/thunderbird" desktop=^3 follow=off
+bspc rule -a delivery-MyDelivery state=floating
 
 if [[ $(xrandr -q | grep 'HDMI-A-0 connected') ]]; then
     xrandr --output eDP --mode 1920x1080 --left-of HDMI-A-0 --rotate normal --output HDMI-A-0 --mode 2560x1080 --rate 100 --rotate normal --primary
@@ -38,5 +38,7 @@ feh --no-fehbg --bg-fill ~/Pictures/wall/neon.png &
 xrdb merge ~/.Xresources &
 rclone mount OneDrive\ UEx: ~/OneDrive --vfs-cache-mode writes &
 numlockx &
-/usr/bin/emacs --daemon &
+emacs --daemon &
+xset s off -dpms
 setxkbmap -option caps:swapescape es
+brightnessctl set 255

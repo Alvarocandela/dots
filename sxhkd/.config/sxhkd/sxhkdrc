@@ -10,16 +10,22 @@ super + n
     bash ~/.local/bin/vi_padding
 
 super + f
-    zen-bin -P 'Personal' -no-remote
+    librewolf-bin
 
 super + u
-    zen-bin -P 'Uni' -no-remote
+    firefox-bin
 
 super + w
-    zapzap
+    flatpak run com.rtosta.zapzap
 
 super + p
     ~/.config/rofi/bin/powermenu
+
+super +e
+    emacsclient -c
+
+super + r
+    st -e ranger
 
 super + d
     discord

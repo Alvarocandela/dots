@@ -28,5 +28,6 @@ alias cat="bat"
 alias fastfetch="fastfetch | dotacat"
 alias spotx="bash <(curl -sSL https://spotx-official.github.io/run.sh) -i"
 
-export PATH=$PATH:$HOME/.spicetify:$HOME/.emacs.d/bin
+export PATH=$PATH:$HOME/.spicetify:$HOME/.emacs.d/bin:/home/alvaro/.local/bin
+export _JAVA_AWT_WM_NONREPARENTING=1
 export TERM="xterm-256color"
