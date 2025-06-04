@@ -1,10 +1,6 @@
 clear && fastfetch | dotacat
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
 
 autoload -Uz up-line-or-beginning-search
 autoload -Uz down-line-or-beginning-search
@@ -23,16 +19,15 @@ bindkey '^[[D'    backward-char                 # left       move cursor one cha
 bindkey '^[[C'    forward-char                  # right      move cursor one char forward
 bindkey '^[[A'    up-line-or-beginning-search   # up         prev command in history
 bindkey '^[[B'    down-line-or-beginning-search # down       next command in history
-plugins=(sudo command-not-found history-substring-search)
-fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
-source $HOME/.oh-my-zsh/oh-my-zsh.sh
-autoload -U compinit; compinit
+plugins=(sudo history-substring-search)
+source $ZSH/oh-my-zsh.sh
 
 #Some aliases
 alias ls="lsd"
 alias cat="bat"
-alias neofetch="neofetch | lolcat"
-alias ssh="kitty +kitten ssh"
+alias fastfetch="fastfetch | dotacat"
 alias spotx="bash <(curl -sSL https://spotx-official.github.io/run.sh) -i"
 
-export PATH=$PATH:/home/alvaro/.spicetify
+export PATH=$PATH:$HOME/.spicetify:$HOME/.emacs.d/bin:/home/alvaro/.local/bin
+export _JAVA_AWT_WM_NONREPARENTING=1
+export TERM="xterm-256color"
