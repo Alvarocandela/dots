@@ -32,6 +32,6 @@ case $chosen in
 			systemctl suspend
         ;;
     $logout)
-    hyprland dispatch exit
+    hyprctl dispatch exit
         ;;
 esac
